@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"> 
+	<title>List Manager Design Document</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--jQuery-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class=""><!-- this is NOT scrollable -->
+	
+		<!-- top banner -->
+		<div>
+			<div><h1>To_doreganize</h1></div>
+			<div class="settings"><img href="#"></div>
+		</div>
+		
+		<!-- add new entry -->
+		<div class="newEntry">
+			<div class="newName" contenteditable="true" placeholder="new entry name"></div>
+			<button class="createEntry">+</button>
+		</div>
+		
+		<!-- list of entries -->
+		<div class="listBox">
+			<!-- this is scrollable -->
+		
+			<!--entry templates on home -->
+			<div class="">
+			<!--may need a checkbox in the front -->
+				<h1>MY ENTRY</h1>
+			</div>
+		
+		</div>
+	</div>
+	
+	
+	<!--entry templates on edit, pops out when user click on "+" button -->
+	<div class="">
+		<div class="newName" contenteditable="true" placeholder="new entry name"></div>
+		
+		<label>Time reminded</label>
+		<input class="timeRemind" type="datetime"></input>
+	
+		<div class="entryDescription" contenteditable="true" placeholder="put entry descriptions here"></div>
+	</div>
+	<!-- END entry templates-->
+	
+</body>
+</html>
