@@ -25,6 +25,14 @@ body{
 	padding-bottom:1%;
 }
 
+.entries:hover{
+	cursor:pointer;
+}
+
+.entries:hover h3{
+	font-weight:300%;
+}
+
 h3{
 	margin: 0px;
 }
