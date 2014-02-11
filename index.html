@@ -8,10 +8,11 @@
 
 	<!--jQuery-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+	
+	<script src="api/jsrender.min.js.map"></script>
+	
 	<script src="script.js"></script>
 	
-	<link rel="stylesheet" href="style.css">
 
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -23,18 +24,18 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="container"><!-- this is NOT scrollable -->
-	
-		<!-- top banner -->
+	<!-- top banner -->
 		<div id="banner">
 			<div><h1>To_dorganize</h1></div>
 			<div id="settings"><img href="#"></div>
 		</div>
+
+	<div id="container"><!-- this is NOT scrollable -->
 		
 		<!-- add new entry -->
 		<div id="newEntry">
 			<h3 id="newEntryName" class="newName col-lg-11" contenteditable="true" placeholder="new entry name">new entry name</h3>
-			<button class="createEntry btn btn-info">+</button>
+			<button class="createEntry btn btn-sm btn-info">+</button>
 		</div>
 		
 		<!-- list of entries -->
@@ -65,17 +66,21 @@
 	
 	
 	<!--entry templates on edit, pops out when user click on "+" button -->
-	<div class="editWindow hidden">
+	<div class="editWindow">
 		<h3 class="newName" contenteditable="true" placeholder="new entry name">
 			new entry name
 		</h3>
 		
-		<label>Time reminded</label>
-		<input class="timeRemind" type="datetime"></input>
-	
+		<div id="timeDiv">
+			<label>Set Reminder: </label>
+			<input class="timeRemind" type="datetime"></input>
+		</div>
+		
 		<div class="entryDescription" contenteditable="true" placeholder="put entry descriptions here">
 			put entry descriptions here
 		</div>
+		
+		<button type="button" class="done btn btn-primary btn-sm btn-block">Done</button>
 	</div>
 	<!-- END entry templates-->
 
