@@ -11,46 +11,81 @@
 
 	
 	<link rel="stylesheet" href="style.css">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+<!--CSS-->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class=""><!-- this is NOT scrollable -->
+	<div id="container"><!-- this is NOT scrollable -->
 	
 		<!-- top banner -->
-		<div>
-			<div><h1>To_doreganize</h1></div>
-			<div class="settings"><img href="#"></div>
+		<div id="banner">
+			<div><h1>To_dorganize</h1></div>
+			<div id="settings"><img href="#"></div>
 		</div>
 		
 		<!-- add new entry -->
-		<div class="newEntry">
-			<div class="newName" contenteditable="true" placeholder="new entry name"></div>
-			<button class="createEntry">+</button>
+		<div id="newEntry">
+			<h3 id="newEntryName" class="newName col-lg-11" contenteditable="true" placeholder="new entry name">new entry name</h3>
+			<button class="createEntry btn btn-info">+</button>
 		</div>
 		
 		<!-- list of entries -->
-		<div class="listBox">
+		<div id="listBox">
 			<!-- this is scrollable -->
 		
-			<!--entry templates on home -->
-			<div class="">
-			<!--may need a checkbox in the front -->
-				<h1>MY ENTRY</h1>
-			</div>
+		<div class="entries bg-warning">
+		<!--may need a checkbox in the front -->
+			<h3>MY ENTRY</h3>
+		</div>
+		<div class="entries bg-primary">
+		<!--may need a checkbox in the front -->
+			<h3>MY ENTRY</h3>
+		</div>
+		<div class="entries bg-success">
+		<!--may need a checkbox in the front -->
+			<h3>MY ENTRY</h3>
+		</div>
+
+		<div class="entries bg-danger">
+		<!--may need a checkbox in the front -->
+			<h3>MY ENTRY</h3>
+		</div>
+			
 		
 		</div>
 	</div>
 	
 	
 	<!--entry templates on edit, pops out when user click on "+" button -->
-	<div class="">
-		<div class="newName" contenteditable="true" placeholder="new entry name"></div>
+	<div class="editWindow hidden">
+		<h3 class="newName" contenteditable="true" placeholder="new entry name">
+			new entry name
+		</h3>
 		
 		<label>Time reminded</label>
 		<input class="timeRemind" type="datetime"></input>
 	
-		<div class="entryDescription" contenteditable="true" placeholder="put entry descriptions here"></div>
+		<div class="entryDescription" contenteditable="true" placeholder="put entry descriptions here">
+			put entry descriptions here
+		</div>
 	</div>
 	<!-- END entry templates-->
+
+
+	<script id="theTmpl" type="text/x-jsrender">
+			<!--entry templates on home -->
+			<div class="entries">
+			<!--may need a checkbox in the front -->
+				<h3>MY ENTRY</h3>
+			</div>
+	</script>
 	
 </body>
 </html>

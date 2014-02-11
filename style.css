@@ -1,0 +1,38 @@
+body{
+	font-family:sans-serif;
+}
+
+#banner{
+	background-color: #B26349;
+       min-height:60px;
+       max-height: 70px;
+}
+
+#newEntry{
+	background-color: #107FCC;
+	margin:1%;
+
+}
+
+#newEntryName{
+	font-size:190%;
+}
+
+.entries{
+	min-height:35px;
+	padding-top:1%;
+	padding-left:1%;
+	padding-bottom:1%;
+}
+
+h3{
+	margin: 0px;
+}
+
+#listBox{
+	margin-top:1%;
+
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
