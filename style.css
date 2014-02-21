@@ -1,0 +1,98 @@
+body{
+	font-family:sans-serif;
+}
+
+#banner{
+	background-color: #B26349;
+       min-height:60px;
+       max-height: 70px;
+}
+
+#settingsIMG{
+    min-height:60px;
+    max-height: 70px;
+	vertical-align:top;
+}
+
+#settings{
+	position:absolute;
+	right:0px;
+}
+
+h1 {
+	padding-left:1%;
+	font-size:400%;
+	display:inline;
+}
+
+#newEntry{
+	background-color: #107FCC;
+	margin:1%;
+}
+
+#newEntryName{
+	display:inline;
+}
+
+.createEntry {
+	position:absolute;
+	right:0px;
+}
+
+.newName{
+	font-size:190%;
+}
+
+.entries{
+	min-height:35px;
+	padding-top:1%;
+	padding-left:1%;
+	padding-bottom:1%;
+}
+
+.entries:hover{
+	cursor:pointer;
+}
+
+.entries:hover h3{
+	font-weight:300%;
+}
+
+.checksImages{
+    min-height:20px;
+    max-height: 30px;
+	display:inline;
+	vertical-align:bottom;
+}
+
+h3{
+	display:inline;
+	margin: 0px;
+}
+
+.deleteEntryImages{
+    min-height:20px;
+    max-height: 30px;
+	display:inline;
+	vertical-align:bottom;
+	position:absolute;
+	right:0px;
+}
+
+#listBox{
+	margin-top:1%;
+
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+#timeDiv{
+	margin:1%;
+}
+
+.entryDescription{
+	padding:1%;
+	background-color: #BF7BE8;
+	min-height:200px;
+}

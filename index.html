@@ -8,49 +8,120 @@
 
 	<!--jQuery-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 	
-	<link rel="stylesheet" href="style.css">
+	<!--<script src="api/jsrender.min.js.map"></script>-->
+	
+	<script src="script.js"></script>
+	
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+<!--CSS-->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class=""><!-- this is NOT scrollable -->
-	
-		<!-- top banner -->
-		<div>
-			<div><h1>To_doreganize</h1></div>
-			<div class="settings"><img href="#"></div>
+	<!-- top banner -->
+		<div id="banner">
+			<h1>To_dorganize</h1>
+			<a id="settings" href="#"><img id="settingsIMG" src="images/settings.png" /></a>
 		</div>
-		
+
+	<div id="container"><!-- this is NOT scrollable -->
 		<!-- add new entry -->
-		<div class="newEntry">
-			<div class="newName" contenteditable="true" placeholder="new entry name"></div>
-			<button class="createEntry">+</button>
+		<div id="newEntry">
+			<h3 id="newEntryName" class="newName col-lg-11" contenteditable="true" placeholder="new entry name">new entry name</h3>
+			<button class="createEntry btn btn-sm btn-info">+</button>
 		</div>
 		
 		<!-- list of entries -->
-		<div class="listBox">
+		<div id="listBox">
 			<!-- this is scrollable -->
 		
-			<!--entry templates on home -->
-			<div class="">
-			<!--may need a checkbox in the front -->
-				<h1>MY ENTRY</h1>
+		
+			<div class="tomorrow">
+				<h4>Tomorrow:</h4>
+				<div class="entries bg-warning">
+				<!--may need a checkbox in the front -->
+					<a><img class="checksImages" src="images/checked.png"></a>
+					<h3>MY ENTRY</h3>
+					<a><img class="deleteEntryImages" src="images/delete.png"></a>
+				</div>
 			</div>
+			
+			<div class="today">
+				<h4>Today:</h4>
+				<div class="entries bg-primary">
+				<!--may need a checkbox in the front -->
+					<a><img class="checksImages" src="images/checked.png"></a>
+					<h3>MY ENTRY</h3>
+					<a><img class="deleteEntryImages" src="images/delete.png"></a>
+				</div>
+			</div>
+			
+			<div class="yesterday">
+				<h4>Yesterday:</h4>
+				<div class="entries bg-success">
+				<!--may need a checkbox in the front -->
+					<a><img class="checksImages" src="images/checked.png"></a>
+					<h3>MY ENTRY</h3>
+					<a><img class="deleteEntryImages" src="images/delete.png"></a>
+				</div>
+				
+				<div class="entries bg-danger">
+				<!--may need a checkbox in the front -->
+					<a><img class="checksImages" src="images/checked.png"></a>
+					<h3>MY ENTRY</h3>
+					<a><img class="deleteEntryImages" src="images/delete.png"></a>
+				</div>
+			</div>
+			
+			<div class="untimed">
+				<h4>Un-timed:</h4>
+				<div class="entries bg-primary">
+				<!--may need a checkbox in the front -->
+					<a><img class="checksImages" src="images/checked.png"></a>
+					<h3>MY ENTRY</h3>
+					<a><img class="deleteEntryImages" src="images/delete.png"></a>
+				</div>
+			</div>
+		
+
 		
 		</div>
 	</div>
 	
 	
 	<!--entry templates on edit, pops out when user click on "+" button -->
-	<div class="">
-		<div class="newName" contenteditable="true" placeholder="new entry name"></div>
+	<div class="editWindow">
+		<h3 class="newName" contenteditable="true" >
+			new entry name
+		</h3>
 		
-		<label>Time reminded</label>
-		<input class="timeRemind" type="datetime"></input>
-	
-		<div class="entryDescription" contenteditable="true" placeholder="put entry descriptions here"></div>
+		<div id="timeDiv">
+			<label>Set Reminder: </label>
+			<input class="timeRemind" type="datetime" />
+		</div>
+		
+		<div class="entryDescription" contenteditable="true" >
+			put entry descriptions here
+		</div>
+		
+		<button type="button" class="done btn btn-primary btn-sm btn-block">Done</button>
 	</div>
 	<!-- END entry templates-->
+
+
+	<script id="theTmpl" type="text/x-jsrender">
+			<!--entry templates on home -->
+			<div class="entries">
+			<!--may need a checkbox in the front -->
+				<h3>MY ENTRY</h3>
+			</div>
+	</script>
 	
 </body>
 </html>
