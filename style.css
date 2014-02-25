@@ -1,11 +1,12 @@
 body{
 	font-family:sans-serif;
+	margin:0px;
 }
 
 #banner{
 	background-color: #B26349;
        min-height:60px;
-       max-height: 70px;
+       max-height: 90px;
 }
 
 #settingsIMG{
