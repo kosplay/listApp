@@ -13,12 +13,21 @@
 	
 	<script src="script.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/class/entry.js"></script>
+	<script src="api/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js"></script>
 	
 
 
 
-<!--CSS-->
-<link rel="stylesheet" href="style.css">
+	<!--CSS-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="api/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<!-- top banner -->
@@ -100,7 +109,10 @@
 		
 		<div id="timeDiv">
 			<label>Set Reminder: </label>
-			<input class="timeRemind" type="datetime" />
+			<input class="timeRemind" type="text" data-format="hh:mm:ss"></input>
+			<span class="add-on">
+      			<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+    		</span>
 		</div>
 		
 		<div class="entryDescription" contenteditable="true" >

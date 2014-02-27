@@ -3,11 +3,8 @@
  */
 var curEntry = null;
 var entries = new Array();
-var today = new Array();
-var tomorrow = new Array();
-var today = new Array();
-var yesterday = new Array();
 var completed = new Array();
+var deleted = new Array();
 localInitialization();
 
 
@@ -17,7 +14,8 @@ function retrieveData(){
     var numStored = window.localStorage.length;
     //for(){
     	//window.localStorage.key(i) --get the key, and then use this key to get value
-    	//then populate "entries" array, while put the delted and completed ones into their only array(user dont need them intensively)
+    	//then populate "entries" array, while put the deleted and completed ones into their only array(user dont need them intensively)
+    	
     //}
 }
 
@@ -31,6 +29,7 @@ function populateCatagories(){
  */
 function deleteEntry(id){
     window.localStorage.getItem(id);
+    //set deleted=true and put that entry into deleted array
 }
 
 /** Check/uncheck entry
@@ -44,7 +43,8 @@ function checkEntry(id){
 /** Save entry
  */
 function saveEntry(id, obj){
-	window.localStorage.setItem(id, obj);
+	window.localStorage.setItem( id, JSON.stringify(obj) );//JSON.stringify() / JSON.parse()
+	entries.push(obj);
 }
 
 function localInitialization(){

@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+$(document).ready(function(){//when the page is loaded. put all listeners here.
 	
 	$('.editWindow').hide();
 	
@@ -7,6 +7,7 @@ $(document).ready(function(){
 		editWindow();
 		//brand new entry
 		curEntry = new Entry( $('#newEntryName').text() );
+		$('h3.newName').text(curEntry.name);
 	});
 	
 	$(".entries").click(function(){
@@ -17,17 +18,34 @@ $(document).ready(function(){
 	$(".done").click(function(){
 		//populate the entry
 		curEntry.name = $('#newEntryName').text();
-		if(){//if description is not empty
-		curEntry.description = '';
-		}
+		curEntry.description = $('.entryDescription').text();
+		curEntry.remindDateTime = $('.timeRemind').val();
 
-		if(){//if reminder is not empty
-		curEntry.remidDateTime = '';
+		if(curEntry.id == null){
+			var counter = entries.length + deleted.length + completed.length;
+			if( counter > 0 ){
+				var lastKey = window.localStorage.key(counter);
+				curEntry.id = parseInt(lastKey) + 1;
+			}else{
+				curEntry.id = 0;
+			}
 		}
-
+		alert(curEntry.id);
 		//save entry and show home screen
-		saveEntry(id, curEntry);
+		saveEntry(curEntry.id, curEntry);
 		showMainWindow();
+	});
+	
+	/*
+	$('.timeRemind').click(function(){
+		$('.timeRemind').datetimepicker({
+			pick12HourFormat: true
+		});
+	});
+	*/
+	
+	$('.timeRemind').datetimepicker({
+		pick12HourFormat: true
 	});
 });
 

@@ -9,5 +9,6 @@ function Entry(name){
     this.description = null;
     this.remindDateTime = null;
     this.deleted = false;
+    this.id = null;
     
 }
