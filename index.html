@@ -14,10 +14,11 @@
 	<script src="script.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/class/entry.js"></script>
-	<script src="api/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js"></script>
+	<!--<script src="api/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js"></script>-->
 	
-
-
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="api/jquery-ui-timepicker-addon.js"></script>
 
 	<!--CSS-->
 	<!-- Latest compiled and minified CSS -->
@@ -26,7 +27,7 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 	
-	<link rel="stylesheet" href="api/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" />
+	<!--<link rel="stylesheet" href="api/bootstrap-datetimepicker-0.0.11/css/bootstrap-datetimepicker.min.css" />-->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
 		<!-- add new entry -->
 		<div id="newEntry">
 			<h3 id="newEntryName" class="newName col-lg-11" contenteditable="true" placeholder="new entry name">new entry name</h3>
-			<button class="createEntry btn btn-sm btn-info">+</button>
+			<img src="images/add.png" class="createEntry" height="30" width="30" />
 		</div>
 		
 		<!-- list of entries -->
@@ -50,7 +51,7 @@
 		
 			<div class="tomorrow">
 				<h4>Tomorrow:</h4>
-				<div class="entries bg-warning">
+				<div class="entries well">
 				<!--may need a checkbox in the front -->
 					<a><img class="checksImages" src="images/checked.png"></a>
 					<h3>MY ENTRY</h3>
@@ -60,7 +61,7 @@
 			
 			<div class="today">
 				<h4>Today:</h4>
-				<div class="entries bg-primary">
+				<div class="entries well">
 				<!--may need a checkbox in the front -->
 					<a><img class="checksImages" src="images/checked.png"></a>
 					<h3>MY ENTRY</h3>
@@ -70,14 +71,14 @@
 			
 			<div class="yesterday">
 				<h4>Yesterday:</h4>
-				<div class="entries bg-success">
+				<div class="entries well">
 				<!--may need a checkbox in the front -->
 					<a><img class="checksImages" src="images/checked.png"></a>
 					<h3>MY ENTRY</h3>
 					<a><img class="deleteEntryImages" src="images/delete.png"></a>
 				</div>
 				
-				<div class="entries bg-danger">
+				<div class="entries well">
 				<!--may need a checkbox in the front -->
 					<a><img class="checksImages" src="images/checked.png"></a>
 					<h3>MY ENTRY</h3>
@@ -87,7 +88,7 @@
 			
 			<div class="untimed">
 				<h4>Un-timed:</h4>
-				<div class="entries bg-primary">
+				<div class="entries well">
 				<!--may need a checkbox in the front -->
 					<a><img class="checksImages" src="images/checked.png"></a>
 					<h3>MY ENTRY</h3>
@@ -119,7 +120,7 @@
 			put entry descriptions here
 		</div>
 		
-		<button type="button" class="done btn btn-primary btn-sm btn-block">Done</button>
+		<div class="done">Done</div>
 	</div>
 	<!-- END entry templates-->
 

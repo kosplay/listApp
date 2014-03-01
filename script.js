@@ -10,7 +10,7 @@ $(document).ready(function(){//when the page is loaded. put all listeners here.
 		$('h3.newName').text(curEntry.name);
 	});
 	
-	$(".entries").click(function(){
+	$(".entries h3").click(function(){
 		editWindow();
 		//also need to load info of that entry
 	});
@@ -23,14 +23,17 @@ $(document).ready(function(){//when the page is loaded. put all listeners here.
 
 		if(curEntry.id == null){
 			var counter = entries.length + deleted.length + completed.length;
+			//alert('curEntry ID is null, counter is :' + counter);
 			if( counter > 0 ){
-				var lastKey = window.localStorage.key(counter);
+				var lastKey = window.localStorage.key(counter-1);
 				curEntry.id = parseInt(lastKey) + 1;
 			}else{
 				curEntry.id = 0;
 			}
+		}else{
+			//alert("curEntry ID is not null:" + curEntry.id);
 		}
-		alert(curEntry.id);
+		//alert(curEntry.id);
 		//save entry and show home screen
 		saveEntry(curEntry.id, curEntry);
 		showMainWindow();
@@ -45,7 +48,19 @@ $(document).ready(function(){//when the page is loaded. put all listeners here.
 	*/
 	
 	$('.timeRemind').datetimepicker({
-		pick12HourFormat: true
+	});
+	
+	$('.checkImages').click(function(){
+		
+	});
+	
+	$('h4').click(function(){
+		$(this).siblings().toggle();
+	});
+	
+	$('.deleteEntryImages').click(function(){
+		$(this).parent().parent().fadeOut();
+		$(this).parent().parent().remove();
 	});
 });
 
@@ -64,8 +79,18 @@ function showEditWindow(){
 function showMainWindow(){
 	$('#container').show();
 	$('.editWindow').hide();
+	
+	//reset new entry name
+	$('#newEntryName').text('new entry name');
+	//reset current entry
+	curEntry = null;
+	
+	populateCategories();
+}
+
+function populateCategories(){
+
 }
 
 function populateEntryEdit(){
-
 }
